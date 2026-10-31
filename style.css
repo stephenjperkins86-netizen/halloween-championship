@@ -4,3 +4,24 @@
 
 /* v3: Live TV display switching */
 .display-mode-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}.display-mode-controls button{min-height:56px;padding:12px 8px}.display-mode-controls .selected-mode{outline:2px solid #f4dfa8;box-shadow:0 0 20px #d4b27855}.tv-mode-label{text-align:center;color:#d9bc83;letter-spacing:.18em;font-weight:800;text-transform:uppercase;margin:-5px 0 16px}.tv-grid.tv-split{grid-template-columns:repeat(2,minmax(0,1fr))}.tv-split .person{font-size:clamp(1.4rem,2.4vw,3rem)}.tv-split .points{font-size:clamp(1.5rem,2.8vw,3.3rem)}.tv-split .score{padding:1.5vh 1.2vw}.tv-split .display-title{font-size:clamp(1.3rem,2vw,2.5rem)}@media(max-width:750px){.display-mode-controls{grid-template-columns:1fr}.tv-grid.tv-split{grid-template-columns:1fr}}
+
+/* v4: Family-friendly orange Halloween theme. Presentation only: no scoring changes. */
+:root{color:#fff1d8;background:#140b0a}
+body{background:radial-gradient(circle at 84% 10%,#f7952d80 0 5%,transparent 23%),radial-gradient(ellipse at 16% 0%,#a6421e66,transparent 40%),linear-gradient(155deg,#220d13 0%,#36130e 47%,#140b12 100%);color:#fff1d8;background-attachment:fixed}
+body:before{content:'🎃  🦇  👻';position:fixed;z-index:0;right:2%;top:12%;width:auto;height:auto;border-radius:0;background:none;box-shadow:none;font-size:clamp(2.5rem,5vw,6rem);letter-spacing:.15em;opacity:.26;transform:rotate(-9deg);pointer-events:none}
+body:after{content:'🧟  🧻  🧟‍♀️';position:fixed;z-index:0;left:-1%;right:auto;bottom:1%;font-size:clamp(3rem,7vw,8rem);color:inherit;opacity:.24;transform:rotate(-6deg);pointer-events:none;filter:drop-shadow(0 8px 12px #000)}
+main{position:relative;z-index:1}
+header{border-bottom-color:#e8793377}.crest{background:#3c1a10;border-color:#f59a38;color:#ffae49}.eyebrow,.panel-kicker,.subtitle,.mansion-footer{color:#ffb459}.subtitle{color:#f2c99c}
+h1{color:#fff1d9;text-shadow:0 0 20px #ff7b2666}h1 span,h2,.game{color:#ffb45e}
+p{color:#f1d5bb}
+.panel{background:linear-gradient(155deg,#301711f4,#1b1015f7);border-color:#e77c3c9e;box-shadow:0 15px 48px #090306aa,inset 0 0 0 4px #180e10}
+.panel:before,.panel:after{color:#ff9b4d}
+.score{background:linear-gradient(90deg,#542319,#2c171b);border-color:#e57d465c;box-shadow:inset 4px 0 #ff982f}
+.points{color:#ffd08b}.bar{background:#674339}.tag{border-color:#f4a24d99;background:#432015;color:#ffcf85}
+button,a.button{border-color:#ffb85e;background:linear-gradient(#ffb85d,#ed741e);color:#24110b}
+button.secondary,a.secondary{background:#4c281e;border-color:#c66d40;color:#fff1df}
+input,select{background:#3d211e;border-color:#aa6444;color:#fff9f0}label{color:#ffdbb5}
+.champion{color:#ffbe61}.chapter{background:#54302a;border-color:#895140}.chapter.active{background:#ff902e;border-color:#ff902e;box-shadow:0 0 12px #ff902e88}
+.tv-mode-label{color:#ffb15b}.display-mode-controls .selected-mode{outline-color:#ffb45d;box-shadow:0 0 20px #ff8c3f77}
+.mansion-quote{color:#d9a77c}.mansion-footer{color:#f4ad6b}
+@media(max-width:750px){body:before{right:0;top:20%;font-size:2.5rem;opacity:.12}body:after{font-size:3.4rem;opacity:.12;bottom:2%}}
