@@ -25,3 +25,147 @@ input,select{background:#3d211e;border-color:#aa6444;color:#fff9f0}label{color:#
 .tv-mode-label{color:#ffb15b}.display-mode-controls .selected-mode{outline-color:#ffb45d;box-shadow:0 0 20px #ff8c3f77}
 .mansion-quote{color:#d9a77c}.mansion-footer{color:#f4ad6b}
 @media(max-width:750px){body:before{right:0;top:20%;font-size:2.5rem;opacity:.12}body:after{font-size:3.4rem;opacity:.12;bottom:2%}}
+
+
+
+Loading older messages…
+Says library not found when trying to download
+Sorry about that! 🎃 I've checked the download package, and the ZIP file exists and contains all four update files. It looks like the ChatGPT app is having trouble opening the attachment.
+
+Try this fresh link:
+
+ Download Halloween Championship v5 ZIP
+
+If you still get “Library not found”, try opening this conversation in Chrome at chatgpt.com and downloading it there.
+
+Alternatively, you can download the individual files:
+
+index.html
+
+style.css
+
+haunted-background.png
+
+You'll only need those three files for GitHub. Leave your existing app.js and config.js untouched.
+
+Let me know whether the ZIP or individual files download successfully.
+
+
+index.html
+HTML
+
+style.css
+Code
+
+haunted-background.png
+Image
+Still not working on Chrome
+Sorry, that's frustrating — especially when we've already got your Halloween Championship working so well! 🎃
+
+I've verified that the v5 files exist and the ZIP is valid. The problem appears to be with accessing the download through ChatGPT, rather than the website files themselves.
+
+Let's try a different approach.
+
+I can help you update the files directly through GitHub, without downloading a ZIP. That would avoid the download problem altogether.
+
+Before we do that, could you tell me one thing: when you tap the download link in Chrome, does it still say “Library not found”, or does something different happen?
+
+That will help me choose the simplest workaround without risking your working website.
+
+It just says action can not be completed
+Thanks, that confirms the problem. The files are intact, but ChatGPT isn't successfully handing the download over to Chrome.
+
+Rather than keep sending you the same link, let's try a different approach.
+
+I can help you update the website directly through GitHub, without downloading anything to your phone. We'll keep your existing Firebase setup, scores and three TV modes.
+
+First, I want to check one thing: can you still open and edit files in your GitHub repository?
+
+Open your Halloween Championship repository
+If you can, we'll use that route. We'll also leave your currently working website untouched until the replacement files are ready, so you won't lose the live scoreboard.
+
+Yes I can
+Perfect! 🎃 We can use GitHub directly and avoid the download problem.
+
+Since your existing championship is working, we'll make the changes carefully so we don't disturb Firebase, your scores or the three TV display modes.
+
+Step 1 – Open the website stylesheet
+Open your Halloween Championship style.css file.
+
+Tap the pencil icon to edit it. On Android, you may need to open the three-dot menu first.
+
+Check that you can see the CSS code in the editor.
+
+Don't delete or change anything yet.
+
+Once you're in the editor, tell me “CSS editor open”.
+
+I'll then give you the exact changes for the brighter orange-and-black Haunted Mansion theme. We'll handle the illustrated zombies, mummies and pumpkins separately so the artwork doesn't interfere with the working scoreboard.
+
+Ready
+Great! 🎃 Let's start by making the website much more orange and Halloween-themed, without changing any of your scoring functionality.
+
+Step 2 – Add the new Halloween styling
+You're already editing style.css in GitHub.
+
+Don't delete the existing code. Scroll right to the very bottom and paste this underneath everything else:
+
+
+/* HALLOWEEN CHAMPIONSHIP – ORANGE THEME */
+
+:root {
+  --pumpkin-orange: #ff8500;
+  --pumpkin-gold: #ffbd45;
+  --haunted-black: #100a0a;
+  --haunted-purple: #291426;
+}
+
+body {
+  background:
+    radial-gradient(
+      ellipse at 50% 12%,
+      rgba(255, 126, 0, 0.32),
+      transparent 48%
+    ),
+    linear-gradient(
+      180deg,
+      #341621 0%,
+      #1c0e17 48%,
+      #100a0a 100%
+    ) !important;
+  color: #fff0d7;
+}
+
+h1, h2, h3 {
+  color: var(--pumpkin-gold);
+  text-shadow:
+    0 0 12px rgba(255, 120, 0, 0.45);
+}
+
+button {
+  border-color: #a95516;
+}
+
+button:hover {
+  box-shadow:
+    0 0 16px rgba(255, 130, 0, 0.35);
+}
+
+.card, .panel, .leaderboard {
+  border-color: rgba(255, 145, 36, 0.55);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.4),
+    0 0 18px rgba(255, 110, 0, 0.12);
+}
+
+/* Subtle Halloween decorations */
+
+body::before {
+  content: "🎃";
+  position: fixed;
+  left: 2%;
+  bottom: 4%;
+  font-size: clamp(36px, 6vw, 90px);
+  opacity: 0.65;
+  pointer-events: none;
+  z-index: 0;
