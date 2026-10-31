@@ -156,3 +156,31 @@ body::after{background:radial-gradient(ellipse at 50% 48%,transparent 20%,rgba(1
 .fact-icon{font-size:clamp(1.5rem,2.3vw,2.8rem);line-height:1}
 .tv .game-panel .chapter-track{margin-top:15px}
 @media(max-width:850px){.tv .game-panel{padding:16px !important}.game-facts{padding:8px 2px}.game-fact{font-size:.8rem;padding:4px}.tv .game-panel .game{font-size:clamp(2rem,6vw,3rem)}}
+
+/* v10: Wheel of Fate — only rendered in Current round TV mode */
+.tv .spooky-wheel-panel{margin-top:1vw!important;text-align:center;padding:clamp(10px,1.2vw,22px)!important;background:linear-gradient(145deg,#30180f,#140c0a 75%)!important;border:4px ridge #d37c20!important;box-shadow:inset 0 0 22px #000,0 7px 22px #0009!important}
+.spooky-wheel-panel h3{font-family:'Creepster',Georgia,serif;color:#ffb743;font-size:clamp(1.1rem,1.6vw,2rem);margin:.4em 0;text-shadow:2px 2px #000}
+.wheel-frame{position:relative;width:min(100%,min(27vh,320px));aspect-ratio:1;margin:8px auto 4px;filter:drop-shadow(0 5px 10px #000a)}
+.spooky-wheel{position:relative;width:100%;height:100%;border-radius:50%;border:9px solid #f6a327;background:conic-gradient(from 0deg,#315b91 0 90deg,#bd2778 90deg 180deg,#6b37a5 180deg 270deg,#b95312 270deg 360deg);box-shadow:inset 0 0 0 4px #1a0d0a,inset 0 0 18px #0008,0 0 0 4px #54240a;transform:rotate(0deg);will-change:transform}
+.spooky-wheel::before{content:'';position:absolute;inset:0;border-radius:50%;background:linear-gradient(90deg,transparent calc(50% - 1px),#ffcc7555 50%,transparent calc(50% + 1px)),linear-gradient(0deg,transparent calc(50% - 1px),#ffcc7555 50%,transparent calc(50% + 1px));pointer-events:none}
+.wheel-pointer{position:absolute;top:-19px;left:50%;transform:translateX(-50%);z-index:3;color:#ffcf4b;font-size:35px;line-height:1;text-shadow:0 3px 2px #180800}
+.wheel-name{position:absolute;color:white;font-family:'Oswald',Arial,sans-serif;font-weight:900;font-size:clamp(12px,1.25vw,22px);text-shadow:2px 2px 3px #000,0 0 3px #000;z-index:1;white-space:nowrap}
+.wheel-connor{top:22%;right:12%;transform:rotate(45deg)}.wheel-rhys{bottom:22%;right:17%;transform:rotate(-45deg)}.wheel-mummy{bottom:22%;left:12%;transform:rotate(45deg)}.wheel-daddy{top:22%;left:13%;transform:rotate(-45deg)}
+.wheel-hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:3px solid #ffb443;border-radius:50%;background:#251108;padding:6px;font-size:clamp(15px,2vw,28px);z-index:2}
+.wheel-result{min-height:1.4em;color:#ffe1a3;font-family:'Oswald',Arial,sans-serif;font-weight:800;font-size:clamp(.9rem,1.2vw,1.5rem)}
+@media(max-width:850px){.wheel-frame{width:min(58vw,240px)}.wheel-name{font-size:clamp(12px,3vw,17px)}}
+@media(prefers-reduced-motion:reduce){.spooky-wheel{transition-duration:.01ms!important}}
+
+/* v11 — high-definition, ornate Wheel of Fate */
+.tv .spooky-wheel-panel{background:radial-gradient(ellipse at 50% 5%,#6b331b 0%,#30170f 45%,#110908 100%)!important;border:5px ridge #e7a73c!important;box-shadow:inset 0 0 0 2px #40200b,inset 0 0 34px #000,0 8px 25px #000a!important}
+.tv .spooky-wheel-panel .panel-kicker{color:#ffd778;text-shadow:0 2px 3px #160900,0 0 14px #e86e0a}
+.wheel-frame{width:min(100%,min(29vh,350px));filter:drop-shadow(0 7px 13px #000c)}
+.spooky-wheel{box-sizing:border-box;border:10px solid #e7a943;background:conic-gradient(from 0deg,#155c8b 0deg,#1d78a0 43deg,#134b76 90deg,#b32c64 90deg,#e44976 134deg,#9e1b55 180deg,#562e95 180deg,#8e49b5 224deg,#492277 270deg,#a84b0c 270deg,#f18a19 316deg,#a3430a 360deg);box-shadow:inset 0 0 0 3px #fff0a2,inset 0 0 0 8px #4e230e,inset 0 0 24px #080301ad,0 0 0 3px #542009,0 0 0 7px #f7be56,0 0 0 10px #572608,0 0 20px #ff8b2259;isolation:isolate}
+.spooky-wheel::before{content:'';position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(from 0deg,transparent 0deg 89.2deg,#ffe7a7 89.2deg 90.8deg),radial-gradient(circle at 31% 24%,#fff9 0%,transparent 26%),radial-gradient(circle at center,transparent 52%,#10050077 100%);mix-blend-mode:screen;pointer-events:none;z-index:0}
+.spooky-wheel::after{content:'';position:absolute;inset:5%;border:2px dashed #ffdb8b88;border-radius:50%;box-shadow:inset 0 0 10px #0005;pointer-events:none}
+.wheel-name{font-family:'Oswald',Arial,sans-serif;font-size:clamp(13px,1.45vw,25px);font-weight:900;letter-spacing:.035em;color:#fff8e9;-webkit-text-stroke:.35px #48200b;text-shadow:0 2px 0 #3d1608,0 3px 5px #000,0 0 7px #000c;z-index:1}
+.wheel-connor{top:22%;right:10%;transform:rotate(45deg)}.wheel-rhys{bottom:21%;right:16%;transform:rotate(-45deg)}.wheel-mummy{bottom:21%;left:10%;transform:rotate(45deg)}.wheel-daddy{top:21%;left:12%;transform:rotate(-45deg)}
+.wheel-hub{display:grid;place-items:center;width:21%;aspect-ratio:1;box-sizing:border-box;padding:0;border:5px double #ffe19a;background:radial-gradient(circle at 32% 25%,#7a411d,#2a1209 70%);box-shadow:0 0 0 3px #71370d,0 4px 12px #000c,0 0 12px #ff9b3699;font-size:clamp(18px,2.2vw,33px)}
+.wheel-pointer{top:-25px;font-size:45px;color:#ffda78;-webkit-text-stroke:2px #6c2608;filter:drop-shadow(0 3px 3px #000);z-index:5}
+.wheel-result{color:#ffe9b5;text-shadow:0 2px 3px #000,0 0 12px #e57724}
+@media(max-width:850px){.wheel-frame{width:min(58vw,260px)}.wheel-name{font-size:clamp(12px,3vw,18px)}}
