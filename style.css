@@ -26,146 +26,60 @@ input,select{background:#3d211e;border-color:#aa6444;color:#fff9f0}label{color:#
 .mansion-quote{color:#d9a77c}.mansion-footer{color:#f4ad6b}
 @media(max-width:750px){body:before{right:0;top:20%;font-size:2.5rem;opacity:.12}body:after{font-size:3.4rem;opacity:.12;bottom:2%}}
 
+/* v5: Cartoon haunted mansion theme. CSS only; Firebase and scoring untouched. */
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Creepster&family=Oswald:wght@400;500;600;700&display=swap');
+:root{font-family:'Oswald','Arial Narrow',Arial,sans-serif;color:#fff1da;background:#120704}
+body{background:#140904;color:#fff1da;position:relative;isolation:isolate}
+body::before{content:'';position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(180deg,#16070377,#170906ad 35%,#140805c9 100%),url('haunted-background.png') center center/cover no-repeat;opacity:.9;filter:saturate(1.25)}
+body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 50%,transparent 12%,#0b0309aa 100%);font-size:0;opacity:1;transform:none}
+main{max-width:1340px;padding:20px 24px 34px}
+header{border:0;margin-bottom:14px;padding:12px 12px 18px;justify-content:center;text-align:center;background:linear-gradient(90deg,transparent,#100703b8 20%,#100703b8 80%,transparent)}
+header .heading{flex:initial}.crest{display:none}.eyebrow,.subtitle,.panel-kicker,.mansion-footer{font-family:'Oswald',sans-serif;color:#ffad3e;font-weight:700;letter-spacing:.12em}
+h1,h2,.game,.champion,.display-title{font-family:'Creepster','Almendra Display',Georgia,serif;letter-spacing:.035em}
+h1{font-size:clamp(2.5rem,5vw,5.7rem);line-height:.92;color:#ff9c19;text-transform:uppercase;-webkit-text-stroke:.7px #2b0800;text-shadow:3px 4px #4b0d00,0 0 24px #f9670d}
+h1 span{color:#ffb337}.subtitle{font-size:clamp(.8rem,1.4vw,1.4rem);color:#fff1d6;letter-spacing:.13em}
+.panel{background:linear-gradient(150deg,#27150bf4,#100c0bfa 70%);border:5px ridge #9b4c1a;border-radius:7px;box-shadow:0 0 0 2px #1b0904,0 14px 34px #080300d9,inset 0 0 25px #100500;padding:24px}
+.panel:before,.panel:after{content:'🕸';color:#b6a28c;opacity:.6;font-size:22px}
+.panel:before{left:3px;top:0}.panel:after{right:3px;bottom:0}
+h2,.display-title{color:#ff9e2a;text-transform:uppercase;text-shadow:2px 2px #2a0904}
+.panel-kicker{font-size:clamp(.72rem,1vw,1rem);color:#ffac38}.score{background:linear-gradient(90deg,#160e10,#21140d);border:2px solid #754021;border-radius:5px;box-shadow:inset 0 0 0 1px #32160a;margin:9px 0;padding:12px 15px}
+.place{width:64px;font-size:clamp(1.5rem,2.5vw,2.7rem);filter:drop-shadow(0 2px 2px #000)}
+.person{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,2.9vw,3.4rem);line-height:1.12;text-shadow:1px 2px #0a0508}
+.points{font-family:'Oswald',sans-serif;font-weight:700;color:#fff9ec;text-shadow:2px 3px #1d0b06}
+.bar{background:#080709;border:1px solid #53301d;height:12px}.fill{box-shadow:0 0 10px currentColor}
+.game{color:#fff0d5;text-shadow:2px 3px #3c1209;font-size:clamp(2rem,3.5vw,4rem)}
+.tag{background:#23150b;border-color:#f88c24;color:#ffca70}
+button,a.button{background:linear-gradient(#ffb94c,#f77c10);border:2px solid #fbbd66;color:#180d06;text-transform:uppercase;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+button.secondary,a.secondary{background:#231713;border-color:#c2732b;color:#ffe2b0}
+input,select{background:#231916;border:1px solid #ae6429;color:#fff4e0}
+.tv main{max-width:1880px;padding:1vw 2.3vw}.tv header{margin-bottom:.6vw;padding:0 0 1vw}
+.tv .panel{padding:1.45vw;margin:0 0 1.2vw}.tv .score{padding:1.25vh 1vw;margin:1vh 0}
+.tv .person{font-size:clamp(1.9rem,2.7vw,3.9rem)}.tv .points{font-size:clamp(2rem,3vw,4.2rem)}
+.tv .display-title{font-size:clamp(1.8rem,2.7vw,3.5rem);margin:10px 0 16px}.tv .game{font-size:clamp(2rem,3vw,3.8rem)}
+.tv-grid{grid-template-columns:minmax(0,1.5fr) minmax(260px,.9fr);gap:1.5vw}.tv-grid.tv-split{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tv-mode-label{font-family:'Oswald',sans-serif;color:#ffbe59;margin:0 0 12px}.chapter.active{background:#ff941e}.mansion-footer{color:#ffac46}
+.display-mode-controls .selected-mode{outline-color:#ffa33c;box-shadow:0 0 16px #ff820b}
+@media(max-width:750px){main{padding:12px}header{padding:10px 0 14px}h1{font-size:clamp(2.1rem,8vw,3.4rem)}.panel{padding:14px;border-width:3px}.score{padding:10px}.place{width:38px}.person{font-size:1.4rem}.tv-grid,.tv-grid.tv-split{grid-template-columns:1fr}.tv .panel{padding:14px}.tv .person{font-size:1.5rem}.tv .points{font-size:1.9rem}.display-mode-controls{grid-template-columns:repeat(3,minmax(0,1fr))}.display-mode-controls button{font-size:.75rem;padding:8px 3px}}
 
-
-Loading older messages…
-Says library not found when trying to download
-Sorry about that! 🎃 I've checked the download package, and the ZIP file exists and contains all four update files. It looks like the ChatGPT app is having trouble opening the attachment.
-
-Try this fresh link:
-
- Download Halloween Championship v5 ZIP
-
-If you still get “Library not found”, try opening this conversation in Chrome at chatgpt.com and downloading it there.
-
-Alternatively, you can download the individual files:
-
-index.html
-
-style.css
-
-haunted-background.png
-
-You'll only need those three files for GitHub. Leave your existing app.js and config.js untouched.
-
-Let me know whether the ZIP or individual files download successfully.
-
-
-index.html
-HTML
-
-style.css
-Code
-
-haunted-background.png
-Image
-Still not working on Chrome
-Sorry, that's frustrating — especially when we've already got your Halloween Championship working so well! 🎃
-
-I've verified that the v5 files exist and the ZIP is valid. The problem appears to be with accessing the download through ChatGPT, rather than the website files themselves.
-
-Let's try a different approach.
-
-I can help you update the files directly through GitHub, without downloading a ZIP. That would avoid the download problem altogether.
-
-Before we do that, could you tell me one thing: when you tap the download link in Chrome, does it still say “Library not found”, or does something different happen?
-
-That will help me choose the simplest workaround without risking your working website.
-
-It just says action can not be completed
-Thanks, that confirms the problem. The files are intact, but ChatGPT isn't successfully handing the download over to Chrome.
-
-Rather than keep sending you the same link, let's try a different approach.
-
-I can help you update the website directly through GitHub, without downloading anything to your phone. We'll keep your existing Firebase setup, scores and three TV modes.
-
-First, I want to check one thing: can you still open and edit files in your GitHub repository?
-
-Open your Halloween Championship repository
-If you can, we'll use that route. We'll also leave your currently working website untouched until the replacement files are ready, so you won't lose the live scoreboard.
-
-Yes I can
-Perfect! 🎃 We can use GitHub directly and avoid the download problem.
-
-Since your existing championship is working, we'll make the changes carefully so we don't disturb Firebase, your scores or the three TV display modes.
-
-Step 1 – Open the website stylesheet
-Open your Halloween Championship style.css file.
-
-Tap the pencil icon to edit it. On Android, you may need to open the three-dot menu first.
-
-Check that you can see the CSS code in the editor.
-
-Don't delete or change anything yet.
-
-Once you're in the editor, tell me “CSS editor open”.
-
-I'll then give you the exact changes for the brighter orange-and-black Haunted Mansion theme. We'll handle the illustrated zombies, mummies and pumpkins separately so the artwork doesn't interfere with the working scoreboard.
-
-Ready
-Great! 🎃 Let's start by making the website much more orange and Halloween-themed, without changing any of your scoring functionality.
-
-Step 2 – Add the new Halloween styling
-You're already editing style.css in GitHub.
-
-Don't delete the existing code. Scroll right to the very bottom and paste this underneath everything else:
-
-
-/* HALLOWEEN CHAMPIONSHIP – ORANGE THEME */
-
-:root {
-  --pumpkin-orange: #ff8500;
-  --pumpkin-gold: #ffbd45;
-  --haunted-black: #100a0a;
-  --haunted-purple: #291426;
-}
-
-body {
-  background:
-    radial-gradient(
-      ellipse at 50% 12%,
-      rgba(255, 126, 0, 0.32),
-      transparent 48%
-    ),
-    linear-gradient(
-      180deg,
-      #341621 0%,
-      #1c0e17 48%,
-      #100a0a 100%
-    ) !important;
-  color: #fff0d7;
-}
-
-h1, h2, h3 {
-  color: var(--pumpkin-gold);
-  text-shadow:
-    0 0 12px rgba(255, 120, 0, 0.45);
-}
-
-button {
-  border-color: #a95516;
-}
-
-button:hover {
-  box-shadow:
-    0 0 16px rgba(255, 130, 0, 0.35);
-}
-
-.card, .panel, .leaderboard {
-  border-color: rgba(255, 145, 36, 0.55);
-  box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.4),
-    0 0 18px rgba(255, 110, 0, 0.12);
-}
-
-/* Subtle Halloween decorations */
-
-body::before {
-  content: "🎃";
-  position: fixed;
-  left: 2%;
-  bottom: 4%;
-  font-size: clamp(36px, 6vw, 90px);
-  opacity: 0.65;
-  pointer-events: none;
-  z-index: 0;
+/* v6 — large-screen Haunted Mansion visual refinements; no data or scoring changes */
+body{background:#120703;color:#fff4df}
+body::before{background:linear-gradient(180deg,rgba(17,5,2,.28),rgba(17,5,2,.48) 48%,rgba(17,5,2,.68)),url('haunted-background.png') center center/cover no-repeat;opacity:1;filter:saturate(1.3)}
+body::after{background:radial-gradient(ellipse at 50% 48%,transparent 20%,rgba(14,4,2,.48) 100%)}
+.tv main{max-width:none;width:100%;padding:1.1vh 2.1vw 1.4vh}
+.tv header{margin:0 0 .7vh;padding:.35vh 0 1vh}
+.tv h1{font-size:clamp(2.5rem,4.5vw,6rem)}
+.tv .tv-mode-label{font-size:clamp(.9rem,1.15vw,1.45rem);margin:0 0 .8vh}
+.tv .tv-grid{gap:1.4vw;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+.tv .tv-grid.tv-split{grid-template-columns:repeat(2,minmax(0,1fr))}
+.tv .panel{padding:1.5vw;margin-bottom:1vh;background:linear-gradient(145deg,rgba(28,12,6,.94),rgba(12,8,8,.96));border-color:#c16b24}
+.tv .score{min-height:10.4vh;margin:.8vh 0;padding:1.1vh 1.25vw;background:linear-gradient(90deg,rgba(12,9,10,.98),rgba(40,22,11,.95));border-color:#9e5628}
+.tv .person{font-size:clamp(2rem,3.25vw,4.8rem)}
+.tv .points{font-size:clamp(2rem,3.5vw,5rem)}
+.tv .place{width:clamp(45px,5vw,95px)}
+.tv .game{font-size:clamp(2rem,3.2vw,4.5rem)}
+.tv .display-title{font-size:clamp(1.8rem,2.8vw,3.9rem);margin:.6vh 0 1.3vh}
+.tv .panel-kicker{font-size:clamp(.8rem,1.1vw,1.4rem)}
+.tv .game-panel p{font-size:clamp(1.1rem,1.65vw,2rem)}
+.tv .mansion-quote{margin:.8vh 0;font-size:clamp(1rem,1.35vw,1.8rem)}
+.tv .mansion-footer{margin-top:.5vh}
+@media(max-width:750px){.tv main{padding:12px}.tv .tv-grid,.tv .tv-grid.tv-split{grid-template-columns:1fr}.tv .score{min-height:auto}.tv .person{font-size:1.5rem}.tv .points{font-size:1.9rem}}
