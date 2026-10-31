@@ -11,6 +11,17 @@ const gameGoals=['MOST CATCHES WINS','FASTEST TIME WINS','BEST RESULT WINS','HIG
 const rules=['5 rounds; most successful catches wins.','Build and collapse 10 cups; fastest of two attempts wins.','Rank by the board game results.','Bounce 10 balls; score cups by distance.','One complete bowling game; rank by bowling score.','Eat hanging marshmallow without hands; no rushing or forced swallowing.','Play to determine all four finishing positions.','Two soft-ball throws at 10 cups; most knocked down wins.','Five blindfolded beanbag throws: near 1, middle 3, far 5.','Cooperative: victory 5 each; otherwise 1–4 based on cures; up to 2 personal bonus points.'];
 const params=new URLSearchParams(location.search),mode=params.get('mode')||'home',room=params.get('room')||'';
 const appEl=document.querySelector('#app');
+// Centre the four labels in their respective wheel quarters on both displays.
+const wheelLabelStyle=document.createElement('style');
+wheelLabelStyle.textContent=`
+.spooky-wheel .wheel-name{position:absolute!important;right:auto!important;bottom:auto!important;transform:translate(-50%,-50%)!important;text-align:center!important;white-space:nowrap!important;line-height:1.1!important;}
+.spooky-wheel .wheel-connor{left:68%!important;top:32%!important;}
+.spooky-wheel .wheel-rhys{left:68%!important;top:68%!important;}
+.spooky-wheel .wheel-mummy{left:32%!important;top:68%!important;}
+.spooky-wheel .wheel-daddy{left:32%!important;top:32%!important;}
+`;
+document.head.appendChild(wheelLabelStyle);
+
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const header=()=>`<header class="mansion-header"><div class="crest" aria-hidden="true">♜</div><div class="heading"><div class="eyebrow">✦ THE PERKINS FAMILY · ALL HALLOWS’ EVE 2026 ✦</div><h1>Halloween <span>Championship</span></h1><div class="subtitle">THE HAUNTED MANSION TOURNAMENT</div></div><span class="tag"><span class="live-dot"></span> LIVE</span></header>`;
 const configured=firebaseConfig.apiKey!=='REPLACE_ME'&&firebaseConfig.projectId!=='REPLACE_ME';
